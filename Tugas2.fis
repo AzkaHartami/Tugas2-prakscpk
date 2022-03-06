@@ -1,0 +1,67 @@
+[System]
+Name='Tugas2'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=3
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Cerita'
+Range=[0 10]
+NumMFs=3
+MF1='buruk':'trimf',[1 2 3]
+MF2='biasa':'trimf',[4 6 7]
+MF3='keren':'trimf',[8 9 10]
+
+[Input2]
+Name='Cinematography'
+Range=[0 10]
+NumMFs=3
+MF1='buruk':'trimf',[1 2 3]
+MF2='biasa':'trimf',[4 6 7]
+MF3='keren':'trimf',[8 9 10]
+
+[Input3]
+Name='Ending'
+Range=[0 10]
+NumMFs=3
+MF1='buruk':'trimf',[1 2 3]
+MF2='biasa':'trimf',[4 6 7]
+MF3='keren':'trimf',[8 9 10]
+
+[Output1]
+Name='Rating'
+Range=[0 10]
+NumMFs=3
+MF1='buruk':'trimf',[1 2 3]
+MF2='biasa':'trimf',[4 6 7]
+MF3='keren':'trimf',[8 9 10]
+
+[Output2]
+Name='Kepuasan_Penonton'
+Range=[0 10]
+NumMFs=3
+MF1='tidak_puas':'trimf',[1 2 3]
+MF2='puas':'trimf',[4 6 7]
+MF3='sangat_puas':'trimf',[8 9 10]
+
+[Output3]
+Name='menonton_ulang'
+Range=[0 8]
+NumMFs=3
+MF1='tidak':'trimf',[0 1 2]
+MF2='mungkin':'trimf',[3 4 5]
+MF3='pasti':'trimf',[6 7 8]
+
+[Rules]
+1 1 1, 1 1 1 (1) : 1
+2 2 1, 1 0 0 (1) : 1
+1 3 2, 2 1 2 (1) : 1
+3 1 3, 3 2 2 (1) : 1
+3 3 3, 3 3 2 (1) : 1
